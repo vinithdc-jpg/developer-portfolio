@@ -1,0 +1,90 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f5f3ff;
+  padding: 40px 20px;
+}
+
+.main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  color: #6d4aff;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 24px;
+    margin: 20px auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+.contact {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 2px solid #6d4aff;
+  border-color: transparent;
+}
+
+.contact button {
+  padding: 12px;
+  color: white;
+  background: #6d4aff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #5435dc;
+}
+
+.contact .error {
+  margin: 0;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.contact .success {
+  color: #15803d;
+  font-weight: bold;
+}

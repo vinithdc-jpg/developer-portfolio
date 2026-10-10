@@ -1,5 +1,96 @@
 <main class="main">
   <h1>{{ title }}</h1>
   <p>{{ description }}</p>
-</main>
+  <h1>{{ 20 + 9 }}</h1>
 
+  <br />
+
+  <h2>Hello I an {{ name }}</h2>
+  <p>I am {{ role }}</p>
+  <p>I build project count: {{ projectcount + 6 }}</p>
+  <p>Location: {{ location }}</p>
+  <p>Number of skills {{ value }}</p>
+
+  <img [src]="profileImage" [width]="imageSize" alt="Developer profile" />
+
+  <br />
+  <h2>My Availability</h2>
+
+  <p>
+    Status:
+    {{ isAvailable ? 'Available for work' : 'Currently unavailable' }}
+  </p>
+
+  <button (click)="toggleAvailability()">Change Availability</button>
+
+  <button (click)="toggleSkills()">Show skills</button>
+
+  @if (showSkills) {
+    <ul>
+      @for (skill of skills; track skill) {
+        <li>{{ skill }}</li>
+      }
+    </ul>
+  }
+
+  <hr />
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>Have a project in mind? Send me a message.</p>
+
+    <form #contactForm="ngForm" (ngSubmit)="submitContact(contactForm)">
+      <label for="contactName">Your name</label>
+      <input
+        id="contactName"
+        type="text"
+        name="contactName"
+        [(ngModel)]="contactName"
+        required
+        #nameModel="ngModel"
+        placeholder="Enter your name"
+      />
+
+      @if (nameModel.invalid && nameModel.touched) {
+        <p class="error">Please enter your name.</p>
+      }
+
+      <label for="contactEmail">Your email</label>
+      <input
+        id="contactEmail"
+        type="email"
+        name="contactEmail"
+        [(ngModel)]="contactEmail"
+        required
+        email
+        #emailModel="ngModel"
+        placeholder="you@example.com"
+      />
+
+      @if (emailModel.invalid && emailModel.touched) {
+        <p class="error">Enter a valid email address.</p>
+      }
+
+      <label for="contactMessage">Your message</label>
+      <textarea
+        id="contactMessage"
+        name="contactMessage"
+        [(ngModel)]="contactMessage"
+        required
+        #messageModel="ngModel"
+        placeholder="Tell me about your project"
+        rows="4"
+      ></textarea>
+
+      @if (messageModel.invalid && messageModel.touched) {
+        <p class="error">Please enter a message.</p>
+      }
+
+      <button type="submit">Send Message</button>
+
+      @if (submitted) {
+        <p class="success">Your form was submitted successfully!</p>
+      }
+    </form>
+  </section>
+</main>
