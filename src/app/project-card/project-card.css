@@ -1,0 +1,61 @@
+:host {
+  display: block;
+}
+
+.project-card {
+  height: 100%;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.project-card.featured {
+  border: 2px solid #6d4aff;
+  background: #f5f3ff;
+  box-shadow: 0 8px 24px rgba(109, 74, 255, 0.15);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #6d4aff;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-completed {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status-progress {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.status-planned {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.project-card button {
+  padding: 9px 12px;
+  color: white;
+  background: #6d4aff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

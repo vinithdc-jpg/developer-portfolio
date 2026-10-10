@@ -1,0 +1,20 @@
+<article class="project-card" [class.featured]="isFeatured">
+  <h3>{{ project.title }}</h3>
+
+  <p>{{ project.description }}</p>
+
+  <p>Technology: {{ project.technology }}</p>
+
+  <p
+    class="status-badge"
+    [class.status-completed]="project.status === 'Completed'"
+    [class.status-progress]="project.status === 'In Progress'"
+    [class.status-planned]="project.status === 'Planned'"
+  >
+    {{ project.status }}
+  </p>
+
+  <button type="button" (click)="onToggleFeatured()">
+    {{ isFeatured ? 'Remove Featured' : 'Make Featured' }}
+  </button>
+</article>

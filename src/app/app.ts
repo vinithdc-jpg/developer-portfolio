@@ -2,12 +2,12 @@ import { Component, signal } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { NgStyle } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { ProjectCard } from './project-card/project-card';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule, NgClass, NgStyle],
+  imports: [FormsModule, NgClass, NgStyle, ProjectCard],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -94,4 +94,10 @@ export class App {
 
   textColor = '#6d4aff';
   cardBackground = '#f5f3ff';
+
+  featuredProjectId = 1;
+
+  setFeaturedProject(id: number): void {
+    this.featuredProjectId = this.featuredProjectId === id ? 0 : id;
+  }
 }
