@@ -6,6 +6,10 @@
   padding: 40px 20px;
 }
 
+.body {
+  background-color: black;
+}
+
 .main {
   max-width: 800px;
   margin: 40px auto;
@@ -87,4 +91,103 @@ p {
 .contact .success {
   color: #15803d;
   font-weight: bold;
+}
+
+.projects-section,
+.status-section {
+  margin: 40px 0;
+}
+
+.projects-section button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #6d4aff;
+  color: white;
+  cursor: pointer;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #6d4aff;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.featured {
+  border: 2px solid #6d4aff;
+  background: #f5f3ff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-completed {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status-progress {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.status-planned {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-completed {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status-progress {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.status-planned {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.style-demo {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
 }
